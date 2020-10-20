@@ -10,9 +10,9 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>Fran Navarro Developer</title>
+          <title>Fran Navarro Developer - FranNav Dev</title>
           <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="This is the home page of frannav portfolio"/>
+          <meta name="description" content="Here you will find the technology stack and my personal projects."/>
           <meta />
           <meta name="keywords" content="developer, frannav, frannav dev, desarrollador, fullstack, desarrollador web, aplicaciones, app, frontend, backend"/>
           <meta name="robots" content="index"/>

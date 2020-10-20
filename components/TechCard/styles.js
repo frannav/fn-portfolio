@@ -30,7 +30,7 @@ export const Card = styled.article`
     width: 380px;
     transition: .3s;
     & :hover {
-        transform: scale(1.1)
+        transform: scale(1.05)
     }
 `
 
