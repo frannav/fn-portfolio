@@ -27,8 +27,4 @@ export const CardLink = styled.a`
     background-color: ${({ theme }) => theme.colors.primary};
     font-weight: 500;
     transition: .1s;
-    & :hover {
-        transform: scale(1.1);
-        font-weight: 500;
-    }
 `

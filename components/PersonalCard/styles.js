@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
+
 `
 
 export const Article = styled.article`
@@ -26,7 +27,8 @@ export const Img = styled.img`
     box-shadow: 0 10px 14px rgba(0, 0, 0, .2);
     object-fit: cover;
     border-radius: 50%;
-    margin-right:14px;
+    padding: 1px;
+    border: 8px solid transparent;
     transition: .2s;
     & :hover {
         transform: scale(1.2)
@@ -68,8 +70,10 @@ export const CardLink = styled.a`
 export const Text = styled.p`
     font-size: 1.2em;
     font-weight: bold;
+    padding-left: 0.8em;
 `
 
 export const Name = styled(Text)`
     font-size: 2.5em;
+    padding-left: 0.4em;
 `

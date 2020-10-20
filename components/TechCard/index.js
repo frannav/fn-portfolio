@@ -1,8 +1,9 @@
-import { Section, Card, Category, Techs, TextCategory, TextTechs, Content, SecondCategory, ThirdCategory } from './styles';
+import { Section, Card, Category, Techs, TextCategory, TextTechs, Content, SecondCategory, ThirdCategory, FourthCategory } from './styles';
 
 import { 
     FaReact,
-    FaMobileAlt
+    FaMobileAlt,
+    FaDocker
  } from 'react-icons/fa';
 
 import { 
@@ -27,6 +28,11 @@ let backTechs = [
 
 let mobileTechs = [
     'React-Native'
+]
+
+let toolsTechs = [
+    'Docker', 
+    'Testing'
 ]
 
 export default function TechCard() {
@@ -71,6 +77,21 @@ export default function TechCard() {
                     <Techs>
                         {
                             mobileTechs.map((item) => {
+                            return <TextTechs key={item}>{item}</TextTechs>
+                            })
+                        }
+                    </Techs>
+                </Card>
+            </Section>
+            <Section>
+                <Card>
+                    <FourthCategory>
+                        <TextCategory>Tools</TextCategory>
+                        <FaDocker size='52px'/>
+                    </FourthCategory>
+                    <Techs>
+                        {
+                            toolsTechs.map((item) => {
                             return <TextTechs key={item}>{item}</TextTechs>
                             })
                         }

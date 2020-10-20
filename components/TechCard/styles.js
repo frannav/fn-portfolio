@@ -8,6 +8,7 @@ export const Content = styled.div`
     max-width: 100%;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     overflow: hidden;
@@ -22,11 +23,11 @@ export const Section = styled.section`
 `
 
 export const Card = styled.article`
-    margin: 10%;
+    margin: 7%;
     box-shadow: 0px 14px 14px rgba(0, 0, 0, .25);
     color: ${({ theme }) => theme.colors.primary };
     background-color: #e5e5e5;
-    width: 435px;
+    width: 380px;
     transition: .3s;
     & :hover {
         transform: scale(1.1)
@@ -45,7 +46,7 @@ export const Category = styled.div`
     color: ${({ theme }) => theme.colors.secondary };
     transition: .1s;
     & :hover {
-        color: ${({ theme }) => theme.colors.blue };
+        color: ${({ theme }) => theme.colors.yellow };
     }
 `
 
@@ -67,7 +68,7 @@ export const Techs = styled.div`
 `
 
 export const TextTechs = styled.p`
-    margin: 8px;
+    margin: 11px;
     font-weight: 500;
 `
 
@@ -79,8 +80,15 @@ export const SecondCategory = styled(Category)`
 `
 
 export const ThirdCategory = styled(Category)`
-    background-color: ${first};
+    background-color: #B88700;
     & :hover {
-        color: ${({ theme }) => theme.colors.blue };
+        color: ${({ theme }) => theme.colors.primary };
+    }
+`
+
+export const FourthCategory = styled(Category)`
+    background-color:${({ theme }) => theme.colors.blue };
+    & :hover {
+        color: ${({ theme }) => theme.colors.primary };
     }
 `
