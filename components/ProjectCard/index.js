@@ -29,8 +29,8 @@ export default function ProjectCard() {
                         </div>
                         <TagsCard>
                             {
-                                [1,2,3,4,5,6].map(() => {
-                                    return <TagsText>Python</TagsText>
+                                [1,2,3,4,5,6].map((item) => {
+                                    return <TagsText key={item}>Python</TagsText>
                                 })
                             }
                         </TagsCard>

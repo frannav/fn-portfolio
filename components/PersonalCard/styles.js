@@ -21,17 +21,36 @@ export const Article = styled.article`
 `
 
 export const Img = styled.img`
-    background-color: ${({ theme }) => theme.colors.secondary};
     height: 300px;
     width: 300px;
     box-shadow: 0 10px 14px rgba(0, 0, 0, .2);
     object-fit: cover;
     border-radius: 50%;
     padding: 1px;
-    border: 8px solid transparent;
+    border: 3px solid transparent;
     transition: .2s;
     & :hover {
-        transform: scale(1.2)
+        transform: scale(1.07)
+    }
+    @media (max-width: 768px) {
+        height: 150px;
+        width: 150px;
+        margin: 0 auto;
+    }
+`
+
+export const ImgCircle = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    transition: .2s;
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    & :hover {
+        transform: scale(1.2);
+        background: linear-gradient(70deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     }
     @media (max-width: 768px) {
         height: 150px;

@@ -1,4 +1,4 @@
-import { Img, Article, Column, Section, LinkWrapper, CardLink, Text, Name } from './styles';
+import { Img, Article, Column, Section, LinkWrapper, CardLink, Text, Name, ImgCircle } from './styles';
 import Link from 'next/link';
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
@@ -7,7 +7,9 @@ export default function PersonalCard() {
         <Section>
             <Article>
                 <Column>
-                    <Img src='./animoji2.png' alt='' />
+                    <ImgCircle>
+                        <Img src='./animoji2.png' alt='' />
+                    </ImgCircle>
                 </Column>
                 <Column>
                     <Name>
