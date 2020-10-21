@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import BodyComponent from '../components/BodyComponent';
+//import BodyComponent from '../components/BodyComponent';
 import PersonalCard from '../components/PersonalCard';
 import TechCard from '../components/TechCard';
+import ListOfProjectsCards from '../components/ListOfProjectsCards';
+
 
 
 export default function Home() {
@@ -18,10 +20,9 @@ export default function Home() {
           <meta name="robots" content="index"/>
       </Head>
       <NavBar />
-      <BodyComponent>
-        <PersonalCard />
-        <TechCard />
-      </BodyComponent>
+      <PersonalCard />
+      <TechCard />
+      <ListOfProjectsCards />
       <Footer />
     </>
   )

@@ -9,7 +9,7 @@ export const FooterStyled = styled.footer`
     height: 10em;
     margin-top: 15%;
     @media (max-width: 768px) {
-        margin-top: 800px;
+        margin-top: 10%;
     }
 `
 
