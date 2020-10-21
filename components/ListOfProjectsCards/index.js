@@ -5,7 +5,7 @@ export default function ListOfProjectsCards() {
     return (
         <CardsContent>
             <h1>I´m ListOfProjectsCards </h1>
-            <ProjectCard />
+            <ProjectCard photo='animoji2.png' />
         </CardsContent>
     )
 }

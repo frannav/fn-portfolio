@@ -9,9 +9,8 @@ import { Article,
     TagsText
  } from './styles';
 
-let photo = 'animoji2.png';
 
-export default function ProjectCard() {
+export default function ProjectCard({ photo }) {
     return (
         <>
             <Article>
@@ -30,7 +29,7 @@ export default function ProjectCard() {
                         <TagsCard>
                             {
                                 [1,2,3,4,5,6].map((item) => {
-                                    return <TagsText key={item}>Python</TagsText>
+                                    return <TagsText key={item.id}>Python</TagsText>
                                 })
                             }
                         </TagsCard>

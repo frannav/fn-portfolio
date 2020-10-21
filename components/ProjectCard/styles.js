@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 
 export const Article = styled.article`
+    box-shadow: 0px 14px 14px rgba(0, 0, 0, .25);
     margin-top: 3%;
     margin-bottom: 3%;
     width: 550px;
-    border: 1px solid black;
+    border: 3px solid transparent;
     display: flex;
     flex-direction: row;
     border-radius: 2%;
+    transition: .2s;
     /* max-height: 150px; */
+    & :hover {
+        transform: scale(1.02);
+    }
 `
 
 export const ImgWrapper = styled.div`
