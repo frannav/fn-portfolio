@@ -10,7 +10,7 @@ import { Article,
  } from './styles';
 
 
-export default function ProjectCard({ photo }) {
+export default function ProjectCard({ title, photo }) {
     return (
         <>
             <Article>
@@ -22,7 +22,7 @@ export default function ProjectCard({ photo }) {
                         <div>
                             <Link href=''>
                                 <TitleLink>
-                                    <TitleCard>TitleCard</TitleCard>
+                                    <TitleCard>{title}</TitleCard>
                                 </TitleLink>
                             </Link>
                         </div>

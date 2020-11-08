@@ -7,6 +7,6 @@ export const CardsContent = styled.section`
     align-items: center;
     margin-top: 5%;
     width: 100%;
-    height: 800px;
+    height: auto;
     border: 2px solid red;
 `
