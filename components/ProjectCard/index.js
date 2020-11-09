@@ -9,8 +9,7 @@ import { Article,
     TagsText
  } from './styles';
 
-
-export default function ProjectCard({ title, photo }) {
+export default function ProjectCard({ title, photo, tags }) {
     return (
         <>
             <Article>
@@ -28,8 +27,8 @@ export default function ProjectCard({ title, photo }) {
                         </div>
                         <TagsCard>
                             {
-                                [1,2,3,4,5,6].map((item) => {
-                                    return <TagsText key={item.id}>Python</TagsText>
+                                tags.map((item) => {
+                                    return <TagsText key={item}>{item}</TagsText>
                                 })
                             }
                         </TagsCard>

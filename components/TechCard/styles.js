@@ -45,9 +45,6 @@ export const Category = styled.div`
     background-color: ${first};
     color: ${({ theme }) => theme.colors.secondary };
     transition: .1s;
-    & :hover {
-        color: ${({ theme }) => theme.colors.yellow };
-    }
 `
 
 export const TextCategory = styled.p`
@@ -62,9 +59,6 @@ export const Techs = styled.div`
     justify-content: space-around;
     background-color: #e5e5e5;   
     transition: .1s;
-    & :hover {
-        color: ${({ theme }) => theme.colors.blue };
-    } 
 `
 
 export const TextTechs = styled.p`
@@ -74,21 +68,12 @@ export const TextTechs = styled.p`
 
 export const SecondCategory = styled(Category)`
     background-color: ${second};
-    & :hover {
-        color: ${({ theme }) => theme.colors.primary };
-    }
 `
 
 export const ThirdCategory = styled(Category)`
     background-color: #B88700;
-    & :hover {
-        color: ${({ theme }) => theme.colors.primary };
-    }
 `
 
 export const FourthCategory = styled(Category)`
     background-color:${({ theme }) => theme.colors.blue };
-    & :hover {
-        color: ${({ theme }) => theme.colors.primary };
-    }
 `

@@ -1,5 +1,7 @@
 ---
 title: 'Two Forms of Pre-rendering'
+photo: 'animoji2.png'
+tags: ['Python', 'Js', 'MongoDB', 'Lerele']
 date: '2020-01-01'
 ---
 

@@ -1,14 +1,15 @@
+import { getSortedData } from '../lib/markdown';
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-//import BodyComponent from '../components/BodyComponent';
 import PersonalCard from '../components/PersonalCard';
 import TechCard from '../components/TechCard';
 import ListOfProjectsCards from '../components/ListOfProjectsCards';
 
 
+export default function Home({ allInformation }) {
 
-export default function Home() {
+  
   return (
     <>
       <Head>
@@ -22,8 +23,17 @@ export default function Home() {
       <NavBar />
       <PersonalCard />
       <TechCard />
-      <ListOfProjectsCards />
+      <ListOfProjectsCards {...allInformation} />
       <Footer />
     </>
   )
+}
+
+export async function getStaticProps() {
+  const allInformation = getSortedData()
+  return {
+    props: {
+      allInformation
+    }
+  }
 }

@@ -12,7 +12,13 @@ export const Article = styled.article`
     transition: .2s;
     /* max-height: 150px; */
     & :hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
+    }
+    @media (max-width: 375px) {
+        width: 350px;
+    }
+    @media (min-width: 1140px) {
+        width: 750px;
     }
 `
 
@@ -51,6 +57,7 @@ export const TagsCard = styled.div`
 `
 
 export const TagsText = styled.h4`
+    margin-top: 1.5em;
     padding-left: 5px;
     padding-right: 5px;
     font-size: .9em;
