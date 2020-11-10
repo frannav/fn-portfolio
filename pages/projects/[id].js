@@ -1,8 +1,20 @@
-import { getAllIds, getDataFromId } from '../../lib/markdown';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { getAllIds, getDataFromId } from '../../lib/markdown';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
-
+import {
+    Container,
+    Title,
+    TagsWrapper,
+    Tag,
+    Body,
+    MarkdownContent,
+    Content,
+    CardLink
+} from './styles';
+import { FaGithub } from 'react-icons/fa'
 
 export default function Project({ fileData }) {
     return (
@@ -11,12 +23,35 @@ export default function Project({ fileData }) {
                 <title>{fileData.title}</title>
             </Head>
             <NavBar />
-            <h1>Project Page</h1>
-            <h1>{fileData.title}</h1>
-            <h1>{fileData.tags}</h1>
-            <h1>{fileData.date}</h1>
-            <h1>Esto es el contenido del markdown</h1>
-            <div dangerouslySetInnerHTML={{__html: fileData.contentHtml}}/>
+            <Container>
+                <Title>{fileData.title}</Title>
+                <TagsWrapper>
+                    { fileData.tags.map(tag => { return <Tag>{tag}</Tag> }) }
+                </TagsWrapper>
+                <Body>
+                    <MarkdownContent>
+                        <Content dangerouslySetInnerHTML={{__html: fileData.contentHtml}}/>
+                        <Link 
+                            href={fileData.github} 
+                            passHref
+                        >
+                            <CardLink
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
+                                <FaGithub size='27px' />
+                                View code on GitHub
+                            </CardLink>
+                        </Link>
+                    </MarkdownContent>
+                    <Image
+                        src={`/${fileData.photo}`}
+                        alt={`Image from project ${fileData.title}`}
+                        width={fileData.photow}
+                        height={fileData.photoh}
+                    />
+                </Body>
+            </Container>
             <Footer />
         </>
     )

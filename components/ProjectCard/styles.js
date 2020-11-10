@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
+
 export const Article = styled.article`
+    background-color: ${({ theme }) => theme.colors.secondary};
     box-shadow: 0px 14px 14px rgba(0, 0, 0, .25);
     margin-top: 3%;
     margin-bottom: 3%;
@@ -26,6 +28,7 @@ export const ImgWrapper = styled.div`
 `
 
 export const Img = styled.img`
+    border-radius: 05%;
     width: 150px;
     height: auto;
     /* object-fit: cover; */
@@ -40,6 +43,7 @@ export const InfoCard = styled.div`
 `
 
 export const TitleLink = styled.a`
+    color: ${({ theme }) => theme.colors.primary};
     text-decoration: none;
     cursor:pointer;
     & :hover {
@@ -57,6 +61,7 @@ export const TagsCard = styled.div`
 `
 
 export const TagsText = styled.h4`
+    color: ${({ theme }) => theme.colors.primary};
     margin-top: 1.5em;
     padding-left: 5px;
     padding-right: 5px;
