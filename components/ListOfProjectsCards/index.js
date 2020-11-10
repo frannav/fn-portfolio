@@ -24,7 +24,7 @@ export default function ListOfProjectsCards(props) {
             <h1>ListOfProjectsCards </h1>
             {
                 Object.values(props).map((item) => {
-                    return <ProjectCard key={item.id} title={item.title} photo={item.photo} tags={item.tags} />
+                    return <ProjectCard key={item.id} title={item.title} photo={item.photo} tags={item.tags} id={item.id} />
                 })
             }
         </CardsContent>

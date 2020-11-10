@@ -9,7 +9,7 @@ import { Article,
     TagsText
  } from './styles';
 
-export default function ProjectCard({ title, photo, tags }) {
+export default function ProjectCard({ id, title, photo, tags }) {
     return (
         <>
             <Article>
@@ -19,7 +19,7 @@ export default function ProjectCard({ title, photo, tags }) {
                 <InfoCard>
                     <div>
                         <div>
-                            <Link href=''>
+                            <Link href='/projects/[id]' as={`/projects/${id}`}>
                                 <TitleLink>
                                     <TitleCard>{title}</TitleCard>
                                 </TitleLink>
