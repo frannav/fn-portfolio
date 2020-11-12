@@ -21,7 +21,6 @@ let frontTechs = [
 let backTechs = [
     'Node JS',
     'Express JS',
-    'GraphQL',
     'MongoDB',
     'Mongoose'
 ]

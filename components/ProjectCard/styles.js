@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
+let backgroundColor = '#F5F5F5'
 
 export const Article = styled.article`
-    background-color: ${({ theme }) => theme.colors.secondary};
+    background-color: ${backgroundColor};
     box-shadow: 0px 14px 14px rgba(0, 0, 0, .25);
     margin-top: 3%;
     margin-bottom: 3%;
@@ -42,6 +43,7 @@ export const InfoCard = styled.div`
 
 `
 
+
 export const TitleLink = styled.a`
     color: ${({ theme }) => theme.colors.primary};
     text-decoration: none;
@@ -66,4 +68,16 @@ export const TagsText = styled.h4`
     padding-left: 5px;
     padding-right: 5px;
     font-size: .9em;
+    & ::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: black;
+        transition: width .3s;
+    }
+    & :hover::after {
+        width: 100%;
+        transition: width .3s;
+    }
 `

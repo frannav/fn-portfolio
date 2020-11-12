@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
+let first = '#e0e0e0'
 
+export const Section = styled.section`
+    max-width: 1250px;
+    margin: 0 auto;
 `
 
 export const Article = styled.article`
-    border: 2px solid #BFBFC4;
-    background-color: ${({ theme }) => theme.colors.grey};
+    border: 1px solid #F5F5F5;
+    background-color: ${first};
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin: 100px;
@@ -30,12 +33,15 @@ export const Img = styled.img`
     border: 3px solid transparent;
     transition: .2s;
     & :hover {
-        transform: scale(1.07)
+        transform: scale(1.02)
     }
     @media (max-width: 768px) {
         height: 150px;
         width: 150px;
         margin: 0 auto;
+        & :hover {
+        transform: scale(1.03)
+    }
     }
 `
 
@@ -49,7 +55,7 @@ export const ImgCircle = styled.div`
     transition: .2s;
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     & :hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         background: linear-gradient(70deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
     }
     @media (max-width: 768px) {
@@ -88,7 +94,7 @@ export const CardLink = styled.a`
 
 export const Text = styled.p`
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 600;
     padding-left: 0.8em;
 `
 

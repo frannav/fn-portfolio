@@ -1,5 +1,5 @@
 import ProjectCard from '../ProjectCard';
-import { CardsContent } from './styles';
+import { CardsContent, Title } from './styles';
 
 // let myArray = [
 //     {
@@ -21,10 +21,10 @@ import { CardsContent } from './styles';
 export default function ListOfProjectsCards(props) {
     return (
         <CardsContent>
-            <h1>ListOfProjectsCards </h1>
+            <Title>Projects</Title>
             {
                 Object.values(props).map((item) => {
-                    return <ProjectCard key={item.id} title={item.title} photo={item.photo} tags={item.tags} id={item.id} />
+                    return <ProjectCard key={item.id} title={item.title} photo={item.photo} tags={item.tags} id={item.id} demo={item.demo} />
                 })
             }
         </CardsContent>

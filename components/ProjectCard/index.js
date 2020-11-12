@@ -2,14 +2,14 @@ import Link from 'next/link';
 import { Article, 
     ImgWrapper,
     Img,
-    InfoCard, 
+    InfoCard,
     TitleLink,
     TitleCard, 
     TagsCard, 
     TagsText
  } from './styles';
 
-export default function ProjectCard({ id, title, photo, tags }) {
+export default function ProjectCard({ id, title, photo, tags, demo }) {
     return (
         <>
             <Article>

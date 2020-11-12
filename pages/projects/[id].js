@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import { getAllIds, getDataFromId } from '../../lib/markdown';
 import NavBar from '../../components/NavBar';
@@ -11,12 +10,28 @@ import {
     Tag,
     Body,
     MarkdownContent,
+    MarkdownImage,
     Content,
-    CardLink
+    CardLink,
+    DemoLink
 } from './styles';
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaRegWindowMaximize } from 'react-icons/fa'
 
 export default function Project({ fileData }) {
+    let demoLink
+    if (fileData.demo) {
+        demoLink =
+        <Link href={fileData.demo}
+        passHref>
+            <DemoLink target="_blank" rel="noopener noreferrer">
+                <FaRegWindowMaximize size='27px' />
+                Demo
+            </DemoLink> 
+        </Link>
+    } else {
+        demoLink = <h3>Demo not available</h3>
+    }
+
     return (
         <>
             <Head>
@@ -26,29 +41,28 @@ export default function Project({ fileData }) {
             <Container>
                 <Title>{fileData.title}</Title>
                 <TagsWrapper>
-                    { fileData.tags.map(tag => { return <Tag>{tag}</Tag> }) }
+                    {fileData.tags.map(tag => { return <Tag>{tag}</Tag> })}
+                    <Link
+                        href={fileData.github}
+                        passHref
+                    >
+                        <CardLink
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <FaGithub size='27px' />
+                            View code on GitHub
+                        </CardLink>
+                    </Link>
+                    {demoLink}
                 </TagsWrapper>
                 <Body>
                     <MarkdownContent>
-                        <Content dangerouslySetInnerHTML={{__html: fileData.contentHtml}}/>
-                        <Link 
-                            href={fileData.github} 
-                            passHref
-                        >
-                            <CardLink
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                            >
-                                <FaGithub size='27px' />
-                                View code on GitHub
-                            </CardLink>
-                        </Link>
+                        <Content dangerouslySetInnerHTML={{ __html: fileData.contentHtml }} />
                     </MarkdownContent>
-                    <Image
+                    <MarkdownImage
                         src={`/${fileData.photo}`}
                         alt={`Image from project ${fileData.title}`}
-                        width={fileData.photow}
-                        height={fileData.photoh}
                     />
                 </Body>
             </Container>
