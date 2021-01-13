@@ -1,39 +1,28 @@
-import { getSortedData } from '../lib/markdown';
-import Head from 'next/head';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import PersonalCard from '../components/PersonalCard';
-import TechCard from '../components/TechCard';
-import ListOfProjectsCards from '../components/ListOfProjectsCards';
+import Link from 'next/link'
+import LinkIcon from '../components/ui/LinkIcon'
+import { AiFillGithub } from 'react-icons/ai'
+import Avatar from '../components/ui/Avatar'
 
 
-export default function Home({ allInformation }) {
+export default function Home() {
 
-  
   return (
     <>
-      <Head>
-          <title>Fran Navarro Developer - FranNav Dev</title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="description" content="Here you will find the technology stack and my personal projects."/>
-          <meta />
-          <meta name="keywords" content="developer, frannav, frannav dev, desarrollador, fullstack, desarrollador web, aplicaciones, app, frontend, backend"/>
-          <meta name="robots" content="index"/>
-      </Head>
-      <NavBar />
-      <PersonalCard />
-      <TechCard />
-      <ListOfProjectsCards {...allInformation} />
-      <Footer />
+      <h1>Soy un H1</h1>
+      <h2>Soy un H2</h2>
+      <h3>Soy un H3</h3>
+      <h4>Soy un H4</h4>
+      <h5>Soy un H5</h5>
+      <h6>Soy un H6</h6>
+      <br></br>
+      <p>Soy un párrafo Soy un párrafo Soy un párrafo Soy un párrafo Soy un párrafo Soy un párrafo Soy un párrafo</p>
+      <Link href='http://www.google.es' passHref>
+        <a href='https://www.google.es'>Soy un link</a>
+      </Link>
+      <br></br>
+      <LinkIcon icon={< AiFillGithub size='40px' color='black'/>} href='test'/>
+      <br></br>
+      <Avatar />
     </>
   )
-}
-
-export async function getStaticProps() {
-  const allInformation = getSortedData()
-  return {
-    props: {
-      allInformation
-    }
-  }
 }
