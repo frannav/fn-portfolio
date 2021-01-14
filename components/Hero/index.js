@@ -10,6 +10,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 6.5rem;
+  margin-bottom: 6.5rem;
 `
 
 const Content = styled.div`

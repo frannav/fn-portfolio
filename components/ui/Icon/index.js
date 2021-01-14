@@ -14,7 +14,7 @@ const Container = styled.div`
   & div {
     text-align: center;
     text-transform: capitalize;
-    color: #6D7588;
+    /* color: #6D7588; */
   }
 `
 

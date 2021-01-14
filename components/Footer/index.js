@@ -5,6 +5,7 @@ import {
 } from 'react-icons/ai'
 
 const Container = styled.footer`
+  margin-top: 9rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
