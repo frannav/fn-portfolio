@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   align-items: center;
   border-radius: 50%;
   overflow: hidden;
-  background: white;
+  background: black;
   transition: .3s;
   &:hover {
     background: linear-gradient(7deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);

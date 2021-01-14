@@ -1,15 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
-    colors: {
-      primary: '#fff',
-      secondary: '#000',
-      grey: '#CACACE',
-      blue: '#1f5cad',
-      yellow: '#eca009', 
-      orange: '#e85d04'
+    light: {
+        bg: '#fff',
+        fontColor: '#000' 
     },
-  }
+
+    dark: {
+        bg: '#000',
+        fontColor: '#fff' 
+    }
+}
+
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -20,7 +22,19 @@ export const GlobalStyle = createGlobalStyle`
     body {
         margin: 0 auto;
         max-width: 950px;
+        background-color: #000;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        color: #fff;
+    }
+    
 
     h1 {
         font-size: 42px;

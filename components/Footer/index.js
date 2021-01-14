@@ -19,8 +19,8 @@ export default function Footer() {
   return (
     <>
       <Container>
-        <LinkIcon icon={< AiFillGithub size='35px' color='black'/>} href='#' text='Github'/>
-        <LinkIcon icon={< AiFillLinkedin size='35px' color='black'/>} href='#' text='Linkedin'/>
+        <LinkIcon icon={< AiFillGithub size='35px' color='white'/>} href='#' text='Github'/>
+        <LinkIcon icon={< AiFillLinkedin size='35px' color='white'/>} href='#' text='Linkedin'/>
       </Container>
     </>
   )

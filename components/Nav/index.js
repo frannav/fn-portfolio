@@ -11,8 +11,9 @@ const Container = styled.nav`
   align-items: center;
   border-bottom: 1px solid grey;
   height: 100px;
-  background-color: #fff;
+  background-color: ${props => props.theme.dark.bg};
   z-index: 1;
+  color: ${props => props.theme.dark.fontColor};
 `
 
 const Wrapper = styled.div`
@@ -32,7 +33,7 @@ export default function Nav() {
         <div>
           <Link href='/' passHref>
             <a>
-              <Image src='/FN2b.png' width='175px' height='175px'/>
+              <Image src='/FN2w.png' width='175px' height='175px'/>
             </a>
           </Link>
         </div>

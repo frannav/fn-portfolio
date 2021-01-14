@@ -18,8 +18,13 @@ const Content = styled.div`
   width: 400px;
   padding-left: 4rem;
 
-  & h2,h4,p {
+  & h2,h4 {
     padding-top: .8rem;
+    color: ${props => props.theme.dark.fontColor};
+  }
+
+  & p {
+    color: #6c757d;
   }
   & div {
     display: flex;
@@ -38,8 +43,8 @@ export default function Hero({myAvatar, title, subtitle, paragraph}) {
           <p>{paragraph}</p>
           <p>Puedes encontrarme en:</p>
           <div>
-            <LinkIcon icon={< AiFillGithub size='35px' color='black'/>} href='#' text='Github'/>
-            <LinkIcon icon={< AiFillLinkedin size='35px' color='black'/>} href='#' text='Linkedin'/>
+            <LinkIcon icon={< AiFillGithub size='35px' color='white'/>} href='#' text='Github'/>
+            <LinkIcon icon={< AiFillLinkedin size='35px' color='white'/>} href='#' text='Linkedin'/>
           </div>
         </Content>
       </Container>

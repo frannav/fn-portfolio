@@ -4,7 +4,7 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
   grid-template-rows: auto;
-  grid-gap: 3rem;
+  grid-gap: 3.5rem;
   justify-items: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
