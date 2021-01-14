@@ -3,17 +3,23 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 60px;
+  width: 120px;
   height: 60px;
+  & a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+  }
 `
 
 
 const Icon = styled.div`
 `
 
-export default function LinkIcon({icon, href }) {
+export default function LinkIcon({icon, href, text }) {
   return (
     <>
       <Container>
@@ -22,6 +28,7 @@ export default function LinkIcon({icon, href }) {
               <Icon>
                 {icon}
               </Icon>
+              {text}
             </a>
           </Link>
       </Container>

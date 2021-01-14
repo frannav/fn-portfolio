@@ -1,4 +1,8 @@
 import styled from 'styled-components'
+import LinkIcon from '../ui/LinkIcon'
+import { 
+  AiFillGithub, AiFillLinkedin
+} from 'react-icons/ai'
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +19,10 @@ const Content = styled.div`
   & h2,h4,p {
     padding-top: .8rem;
   }
+  & div {
+    display: flex;
+    flex-direction: row;
+  }
 `
 
 export default function Hero({myAvatar, title, subtitle, paragraph}) {
@@ -26,6 +34,11 @@ export default function Hero({myAvatar, title, subtitle, paragraph}) {
           <h2>{title}</h2>
           <h4>{subtitle}</h4>
           <p>{paragraph}</p>
+          <p>Puedes encontrarme en:</p>
+          <div>
+            <LinkIcon icon={< AiFillGithub size='35px' color='black'/>} href='#' text='Github'/>
+            <LinkIcon icon={< AiFillLinkedin size='35px' color='black'/>} href='#' text='Linkedin'/>
+          </div>
         </Content>
       </Container>
     </>
