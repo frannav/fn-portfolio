@@ -62,6 +62,7 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 21px;
         margin: 0;
         padding: 0;
+        color: #24272E;
     }
 
     a {

@@ -2,7 +2,8 @@ import Link from 'next/link'
 import LinkIcon from '../components/ui/LinkIcon'
 import { AiFillGithub } from 'react-icons/ai'
 import Avatar from '../components/ui/Avatar'
-
+import Grid from '../components/ui/Grid'
+import Icon from '../components/ui/Icon'
 
 export default function Home() {
 
@@ -20,9 +21,18 @@ export default function Home() {
         <a href='https://www.google.es'>Soy un link</a>
       </Link>
       <br></br>
-      <LinkIcon icon={< AiFillGithub size='40px' color='black'/>} href='test'/>
+      {/* <LinkIcon icon={< AiFillGithub size='40px' color='black'/>} href='test'/> */}
       <br></br>
-      <Avatar />
+      {/* <Avatar /> */}
+      <br></br>
+      <Grid>
+        <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
+        <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
+        <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
+        <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
+        <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
+        <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
+      </Grid>
     </>
   )
 }
