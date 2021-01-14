@@ -4,12 +4,14 @@ import { AiFillGithub } from 'react-icons/ai'
 import Avatar from '../components/ui/Avatar'
 import Grid from '../components/ui/Grid'
 import Icon from '../components/ui/Icon'
+import Nav from '../components/Nav'
 
 export default function Home() {
 
   return (
     <>
-      <h1>Soy un H1</h1>
+      <Nav />
+      {/* <h1>Soy un H1</h1>
       <h2>Soy un H2</h2>
       <h3>Soy un H3</h3>
       <h4>Soy un H4</h4>
@@ -21,9 +23,9 @@ export default function Home() {
         <a href='https://www.google.es'>Soy un link</a>
       </Link>
       <br></br>
-      {/* <LinkIcon icon={< AiFillGithub size='40px' color='black'/>} href='test'/> */}
+      <LinkIcon icon={< AiFillGithub size='40px' color='black'/>} href='test'/>
       <br></br>
-      {/* <Avatar /> */}
+      <Avatar />
       <br></br>
       <Grid>
         <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
@@ -32,7 +34,7 @@ export default function Home() {
         <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
         <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
         <Icon icon={< AiFillGithub size='60px' color='black'/>} text='github'/>
-      </Grid>
+      </Grid> */}
     </>
   )
 }
