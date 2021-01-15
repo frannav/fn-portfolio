@@ -12,7 +12,7 @@ const Container = styled.div`
     justify-content: space-around;
     align-items: center;
     font-size: 16px;
-    color: ${props => props.theme.dark.fontColor};
+    color: #fff;
   }
 `
 

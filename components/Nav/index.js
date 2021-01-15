@@ -11,9 +11,9 @@ const Container = styled.nav`
   align-items: center;
   border-bottom: 1px solid grey;
   height: 100px;
-  background-color: ${props => props.theme.dark.bg};
+  background-color: #000;
   z-index: 1;
-  color: ${props => props.theme.dark.fontColor};
+  color: #fff;
 `
 
 const Wrapper = styled.div`
@@ -24,6 +24,7 @@ const Wrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   padding-right: 15px;
+
 `
 
 export default function Nav() {

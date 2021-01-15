@@ -4,6 +4,7 @@ import {
   AiFillGithub, AiFillLinkedin
 } from 'react-icons/ai'
 
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -20,10 +21,16 @@ const Content = styled.div`
 
   & h2,h4 {
     padding-top: .8rem;
-    color: ${props => props.theme.dark.fontColor};
+    /* color: #fff; */
+    background: #ccc;
+    background: linear-gradient(70deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
   }
 
   & p {
+    padding-top: 2.1rem;
     color: #6c757d;
   }
   & div {
@@ -41,7 +48,7 @@ export default function Hero({myAvatar, title, subtitle, paragraph}) {
           <h2>{title}</h2>
           <h4>{subtitle}</h4>
           <p>{paragraph}</p>
-          <p>Puedes encontrarme en:</p>
+          <p>You can find me at:</p>
           <div>
             <LinkIcon icon={< AiFillGithub size='35px' color='white'/>} href='#' text='Github'/>
             <LinkIcon icon={< AiFillLinkedin size='35px' color='white'/>} href='#' text='Linkedin'/>

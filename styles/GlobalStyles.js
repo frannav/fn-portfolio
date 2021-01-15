@@ -1,28 +1,28 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const theme = {
-    light: {
-        bg: '#fff',
-        fontColor: '#000' 
-    },
-
-    dark: {
-        bg: '#000',
-        fontColor: '#fff' 
-    }
+export const lightTheme = {
+    body: "#fff",
+    fontColor: "#000",
 }
+  
+export const darkTheme = {
+    body: "#000",
+    fontColor: "#fff",
+};
 
 
 export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        scroll-behavior: smooth;
     }
 
     body {
         margin: 0 auto;
         max-width: 950px;
-        background-color: #000;
+        /* background-color: #000; */
+        background-color: ${(props) => props.theme.body};
     }
 
     h1,

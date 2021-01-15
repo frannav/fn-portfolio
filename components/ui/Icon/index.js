@@ -4,8 +4,8 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
+  width: 110px;
+  height: 110px;
   transition: .3s;
   &:hover {
     transform: scale(1.2)
@@ -14,7 +14,7 @@ const Container = styled.div`
   & div {
     text-align: center;
     text-transform: capitalize;
-    color: ${props => props.theme.dark.fontColor};
+    color: #fff;
   }
 `
 
