@@ -21,6 +21,7 @@ export default function Project() {
   return (
     <h1>🏗Section under construction</h1>
   )
+}
 
 // export default function Project({ fileData }) {
 //     let demoLink
