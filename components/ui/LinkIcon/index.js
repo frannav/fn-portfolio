@@ -25,7 +25,7 @@ export default function LinkIcon({icon, href, text }) {
     <>
       <Container>
           <Link href={href} passHref>
-            <a>
+            <a target="_blank" rel="noreferrer">
               <Icon>
                 {icon}
               </Icon>
