@@ -50,8 +50,8 @@ export default function Hero({myAvatar, title, subtitle, paragraph}) {
           <p>{paragraph}</p>
           <p>You can find me at:</p>
           <div>
-            <LinkIcon icon={< AiFillGithub size='35px' color='white'/>} href='#' text='Github'/>
-            <LinkIcon icon={< AiFillLinkedin size='35px' color='white'/>} href='#' text='Linkedin'/>
+            <LinkIcon icon={< AiFillGithub size='35px' color='white'/>} href='https://github.com/frannav' text='Github'/>
+            <LinkIcon icon={< AiFillLinkedin size='35px' color='white'/>} href='https://www.linkedin.com/in/fran-navarro-martinez/' text='Linkedin'/>
           </div>
         </Content>
       </Container>
