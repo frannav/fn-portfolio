@@ -1,7 +1,7 @@
 ---
 title: 'APP React Native'
 photo: 'projects/cryptotracker.gif'
-tags: ['Javascript', 'Nodejs', 'React', 'React-Native']
+tags: 'Javascript Node React PimPamSL'
 date: '2020-11-10'
 github: 'https://github.com/frannav/React-Native-CryptoTracker'
 demo: ''

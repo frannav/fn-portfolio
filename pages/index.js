@@ -10,9 +10,20 @@ import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import TitleSection from '../components/ui/TitleSection'
+import ListOfProjects from '../components/ListOfProjects'
 
+import { getSortedData } from '../lib/markdown'
 
-export default function Home() {
+export async function getStaticProps() {
+  const allProjectsData = getSortedData()
+  return {
+    props: {
+      allProjectsData
+    }
+  }
+}
+
+export default function Home({allProjectsData}) {
 
   return (
     <>
@@ -24,6 +35,8 @@ export default function Home() {
         subtitle='Junior Developer' 
         paragraph='Hello there! 👋🏼  I´m a junior developer and passionate about technology. I enjoy learning new things to improve day by day.'
       />
+      <TitleSection title={<h4>Projects 🏗</h4>} />
+      <ListOfProjects  list={allProjectsData}/>
       <span id='skills'></span>
       <TitleSection title={<h4>Technologies and tools  ⚙️</h4>} />
       <Grid>

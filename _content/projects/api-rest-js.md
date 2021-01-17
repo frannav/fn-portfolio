@@ -1,7 +1,7 @@
 ---
 title: 'API-REST Movies'
 photo: 'projects/api-rest.png'
-tags: ['Javascript', 'Nodejs', 'Expressjs', 'MongoDB']
+tags: 'Javascript Node React PimPamSL'
 date: '2020-11-10'
 github: 'https://github.com/frannav/Node-api-movies'
 demo: ''
