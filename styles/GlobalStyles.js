@@ -76,13 +76,17 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 21px;
         margin: 0;
         padding: 0;
-        color: #24272E;
+        color: #fff;
     }
 
     a {
         font-size: 21px;
         text-decoration: none;
-        color: inherit;
+        color: #fff;
+    }
+
+    a:hover{
+        color: #0096c7;
     }
 
 `
