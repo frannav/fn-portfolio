@@ -35,8 +35,8 @@ export default function Home({allProjectsData}) {
         subtitle='Junior Developer' 
         paragraph='Hello there! 👋🏼  I´m a junior developer and passionate about technology. I enjoy learning new things to improve day by day.'
       />
-      <TitleSection title={<h4>Projects 🏗</h4>} />
-      <ListOfProjects  list={allProjectsData}/>
+      {/* <TitleSection title={<h4>Projects 🏗</h4>} />
+      <ListOfProjects  list={allProjectsData}/> */}
       <span id='skills'></span>
       <TitleSection title={<h4>Technologies and tools  ⚙️</h4>} />
       <Grid>

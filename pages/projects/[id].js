@@ -1,5 +1,4 @@
-// import Head from 'next/head';
-// import Link from 'next/link';
+import Head from 'next/head';
 import Image from 'next/image'
 import Link from 'next/link'
 import Footer from '../../components/Footer';
@@ -72,6 +71,9 @@ export default function Project({ fileData }) {
 
   return (
     <>
+      <Head>
+        <title>{fileData.title}</title>
+      </Head>
       <Nav />
       <Container>
         <h1>{fileData.title}</h1>
@@ -90,65 +92,11 @@ export default function Project({ fileData }) {
           
         </Content>
         <div>
-          <Image src={fileData.photo} width={300} height={300}/>
+          <Image src={fileData.photo} width={300} height={300} alt={`Image from project ${fileData.title}`}/>
         </div>
       </Container>
       <Footer />
     </>
   )
 }
-
-// export default function Project({ fileData }) {
-//     let demoLink
-//     if (fileData.demo) {
-//         demoLink =
-//         <Link href={fileData.demo}
-//         passHref>
-//             <DemoLink target="_blank" rel="noopener noreferrer">
-//                 <FaRegWindowMaximize size='27px' />
-//                 Demo
-//             </DemoLink> 
-//         </Link>
-//     } else {
-//         demoLink = <h3>Demo not available</h3>
-//     }
-
-//     return (
-//         <>
-//             <Head>
-//                 <title>{fileData.title}</title>
-//             </Head>
-//             <NavBar />
-//             <Container>
-//                 <Title>{fileData.title}</Title>
-//                 <TagsWrapper>
-//                     {fileData.tags.map(tag => { return <Tag>{tag}</Tag> })}
-//                     <Link
-//                         href={fileData.github}
-//                         passHref
-//                     >
-//                         <CardLink
-//                             target="_blank"
-//                             rel="noopener noreferrer"
-//                         >
-//                             <FaGithub size='27px' />
-//                             View code on GitHub
-//                         </CardLink>
-//                     </Link>
-//                     {demoLink}
-//                 </TagsWrapper>
-//                 <Body>
-//                     <MarkdownContent>
-//                         <Content dangerouslySetInnerHTML={{ __html: fileData.contentHtml }} />
-//                     </MarkdownContent>
-//                     <MarkdownImage
-//                         src={`/${fileData.photo}`}
-//                         alt={`Image from project ${fileData.title}`}
-//                     />
-//                 </Body>
-//             </Container>
-//             <Footer />
-//         </>
-//     )
-// }
 
