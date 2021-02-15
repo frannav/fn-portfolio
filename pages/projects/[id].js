@@ -25,8 +25,11 @@ const Container = styled.div`
 `
 
 const LinkWrapper = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 5rem;
   * {
     padding: 10px 20px;
@@ -37,6 +40,7 @@ const Content = styled.div`
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #fff;
+  line-height: 1.8rem;
 `
 
 
@@ -79,11 +83,26 @@ export default function Project({ fileData }) {
         <h1>{fileData.title}</h1>
         <p>{fileData.tags}</p>
         <LinkWrapper>
-          <div>
+          {
+            fileData.url == '' && 
+            <div>
+              
+            </div>
+          }
+          {
+            fileData.url != '' &&
+              <div>
+                <Link href={`https://www.${fileData.url}`} passHref>
+                  <a target="_blank" rel="noreferrer">Project URL: {fileData.url}</a>
+                </Link>
+              </div>
+          }
+          
+          {/* <div>
             <Link href='#' passHref>
               <a>Github repo</a>
             </Link>
-          </div>
+          </div> */}
           <div>
             {demoLink}
           </div>
@@ -91,9 +110,21 @@ export default function Project({ fileData }) {
         <Content dangerouslySetInnerHTML={{ __html: fileData.contentHtml }}>
           
         </Content>
-        <div>
+        {
+          fileData.img != '' &&
+            <div>
+              <Image src={fileData.photo} width={300} height={300} alt={`Image from project ${fileData.title}`}/>
+            </div>
+        }
+        {
+          fileData.img == '' &&
+            <div>
+
+            </div>
+        }
+        {/* <div>
           <Image src={fileData.photo} width={300} height={300} alt={`Image from project ${fileData.title}`}/>
-        </div>
+        </div> */}
       </Container>
       <Footer />
     </>

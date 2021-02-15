@@ -1,10 +1,11 @@
 ---
 title: 'Example Title'
-photo: '/projects/MYIMG'
+# img: '/projects/MYIMG'
+img: ''
 tags: 'example example example'
 date: '2020-11-10'
 github: 'Github URL'
-demo: 'Demo URL'
+url: ''
 ---
 
 Lorem ipsumLorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fermentum, sapien eu efficitur suscipit, felis libero lacinia diam, vitae cursus leo turpis sit amet nibh. Ut vitae lacus eget ligula mollis volutpat in ultricies ante. Proin efficitur interdum elit, vitae maximus metus semper ut. Ut pulvinar odio sit amet nunc tristique, gravida congue nunc lobortis. Mauris maximus nunc non pulvinar dignissim. Etiam eu facilisis ante. Pellentesque hendrerit lacus quis gravida vestibulum. Mauris volutpat mi vel porta ultrices. Phasellus eu volutpat libero. Maecenas ex odio, finibus vitae sem consectetur, ultricies sollicitudin ex.
