@@ -13,6 +13,7 @@ import TitleSection from '../components/ui/TitleSection'
 import ListOfProjects from '../components/ListOfProjects'
 
 import { getSortedData } from '../lib/markdown'
+import SvgNode from '../components/ui/Svg/SvgNode'
 
 export async function getStaticProps() {
   const allProjectsData = getSortedData()
@@ -44,9 +45,10 @@ export default function Home({allProjectsData}) {
         <Icon icon={< AiFillHtml5 size='60px' color='#e34f26' />} text='Html'/>
         <Icon icon={< DiCss3 size='60px' color='#2196F3' /> } text='CSS'/>
         <Icon icon={< FaReact size='60px' color='#53C1DE'/>} text='React'/>
-        <Icon icon={< SiNextDotJs size='60px' color='#fff'/>} text='Next'/>
+        <Icon icon={< SiNextDotJs size='60px' color='#fff'/>} text='Nextjs'/>
         <Icon icon={< SiStyledComponents size='60px' color='#D6B199'/>} text='Styled-Components'/>
-        <Icon icon={< FaNode size='60px' color='#fff'/>} text='Nodejs'/>
+        {/* <Icon icon={< FaNode size='60px' color='#fff'/>} text='Nodejs'/> */}
+        <Icon icon={<SvgNode />} text='Nodejs'/>
         <Icon icon={< FaDocker size='60px' color='#0466c8'/>} text='Docker'/>
         <Icon icon={< DiGit size='60px' color='#DE4C36'/>} text='Git & Github'/>
         <Icon icon={< DiVisualstudio size='60px' color='#0179cb'/>} text='Visual Studio Code'/>

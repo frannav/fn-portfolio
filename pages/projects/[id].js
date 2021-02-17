@@ -5,6 +5,7 @@ import Footer from '../../components/Footer';
 import Nav from '../../components/Nav';
 import { getAllIds, getDataFromId } from '../../lib/markdown'
 import styled from 'styled-components'
+import SvgWebsite from '../../components/ui/Svg/SvgWebsite';
 
 const Container = styled.div`
   display: flex;
@@ -14,11 +15,13 @@ const Container = styled.div`
   padding-left: 1.5rem;
   padding-bottom: 1.5rem;
   & h1 {
+    color: #6c757d;
     padding-top: 3rem;
     padding-bottom: .5rem;
   }
 
   & p {
+    color: #ced4da;
     padding-top: .5rem;
     padding-bottom: .5rem;
   }
@@ -30,14 +33,38 @@ const LinkWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5rem;
+  padding-bottom: .5rem;
   * {
     padding: 10px 20px;
   }
 `
 
+const LinkContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: .2s;
+
+  a {
+    color: #e5e5e5;
+  }
+
+  p {
+    color: #353535;
+  }
+
+  & :hover {
+    transform: scale(1.05);
+  }
+`
+
+const SvgComponentContainer = styled.div`
+  width: 30px;
+`
+
 const Content = styled.div`
-  padding-top: 3rem;
+  padding-top: .3rem;
   padding-bottom: 3rem;
   color: #fff;
   line-height: 1.8rem;
@@ -91,29 +118,49 @@ export default function Project({ fileData }) {
           }
           {
             fileData.url != '' &&
-              <div>
+              <LinkContainer>
+                <p>Link:</p>
                 <Link href={`https://www.${fileData.url}`} passHref>
-                  <a target="_blank" rel="noreferrer">Project URL: {fileData.url}</a>
+                  <a target="_blank" rel="noreferrer">{fileData.url}</a>
                 </Link>
-              </div>
+                <SvgComponentContainer>
+                  <SvgWebsite />
+                </SvgComponentContainer>
+              </LinkContainer>
           }
-          
-          {/* <div>
-            <Link href='#' passHref>
-              <a>Github repo</a>
-            </Link>
-          </div> */}
           <div>
             {demoLink}
           </div>
         </LinkWrapper>
-        <Content dangerouslySetInnerHTML={{ __html: fileData.contentHtml }}>
-          
-        </Content>
+        
+        {
+          fileData.contentHtml == '' &&
+            <span></span>
+        }
+        {
+          fileData.contentHtml != '' &&
+          <Content dangerouslySetInnerHTML={{ __html: fileData.contentHtml }}>
+          </Content>
+        }
+        
         {
           fileData.img != '' &&
             <div>
-              <Image src={fileData.photo} width={300} height={300} alt={`Image from project ${fileData.title}`}/>
+              {
+                fileData.url == '' && 
+                  <div>
+                    <Image src={fileData.img} width='600' height='700' alt={`Image from project ${fileData.title}`}/>
+                  </div>
+              }
+              {
+                fileData.url != '' &&
+                  <Link href={`https://www.${fileData.url}`} passHref>
+                    <a target="_blank" rel="noreferrer">
+                      <Image src={fileData.img} width='600' height='700' alt={`Image from project ${fileData.title}`}/>
+                    </a>
+                  </Link>
+              }
+
             </div>
         }
         {
@@ -122,9 +169,6 @@ export default function Project({ fileData }) {
 
             </div>
         }
-        {/* <div>
-          <Image src={fileData.photo} width={300} height={300} alt={`Image from project ${fileData.title}`}/>
-        </div> */}
       </Container>
       <Footer />
     </>

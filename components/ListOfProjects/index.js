@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-wrap: wrap;
 `
 const Item = styled.div`
-  width: 200px;
+  width: 250px;
   margin-top: 1.75em;
   margin-bottom: 1.75em;
   border-radius: 3px;
