@@ -39,10 +39,13 @@ export default function Nav() {
           </Link>
         </div>
         <Wrapper>
-          <Link href='#skills' passHref>
+          <Link href='/#projects' passHref>
+            <a>Projects</a>
+          </Link>
+          <Link href='/#skills' passHref>
             <a>Skills</a>
           </Link>
-          <Link href='#about' passHref>
+          <Link href='/#about' passHref>
             <a>About</a>
           </Link>
         </Wrapper>

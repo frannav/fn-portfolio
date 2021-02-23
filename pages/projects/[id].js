@@ -21,6 +21,7 @@ const Container = styled.div`
   }
 
   & p {
+    font-size: 1rem;
     color: #ced4da;
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -47,7 +48,7 @@ const LinkContainer = styled.div`
   transition: .2s;
 
   a {
-    color: #e5e5e5;
+    color: #023e8a;
   }
 
   p {
@@ -55,7 +56,7 @@ const LinkContainer = styled.div`
   }
 
   & :hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 `
 
@@ -120,7 +121,7 @@ export default function Project({ fileData }) {
             fileData.url != '' &&
               <LinkContainer>
                 <p>Link:</p>
-                <Link href={`https://www.${fileData.url}`} passHref>
+                <Link href={`${fileData.url}`} passHref>
                   <a target="_blank" rel="noreferrer">{fileData.url}</a>
                 </Link>
                 <SvgComponentContainer>
@@ -154,7 +155,7 @@ export default function Project({ fileData }) {
               }
               {
                 fileData.url != '' &&
-                  <Link href={`https://www.${fileData.url}`} passHref>
+                  <Link href={`${fileData.url}`} passHref>
                     <a target="_blank" rel="noreferrer">
                       <Image src={fileData.img} width='600' height='700' alt={`Image from project ${fileData.title}`}/>
                     </a>

@@ -36,7 +36,8 @@ export default function Home({allProjectsData}) {
         subtitle='Junior Developer' 
         paragraph='Hello there! 👋🏼  I´m a junior developer and passionate about technology. I enjoy learning new things to improve day by day.'
       />
-      <TitleSection title={<h4>Projects 🏗</h4>} />
+      <span id='projects'></span>
+      <TitleSection title={<h4>Projects</h4>} />
       <ListOfProjects  list={allProjectsData}/>
       <span id='skills'></span>
       <TitleSection title={<h4>Technologies and tools  ⚙️</h4>} />
@@ -53,8 +54,8 @@ export default function Home({allProjectsData}) {
         <Icon icon={< DiGit size='60px' color='#DE4C36'/>} text='Git & Github'/>
         <Icon icon={< DiVisualstudio size='60px' color='#0179cb'/>} text='Visual Studio Code'/>
         <Icon icon={< FaWordpress size='60px' color='#1c6189'/>} text='Wordpress'/>
-        <Icon icon={< FaPython size='60px' color='#fff'/>} text='Python'/>
-        <Icon icon={< FaJava size='60px' color='#e34f26'/>} text='Java'/>
+        {/* <Icon icon={< FaPython size='60px' color='#fff'/>} text='Python'/> */}
+        {/* <Icon icon={< FaJava size='60px' color='#e34f26'/>} text='Java'/> */}
         <Icon icon={< FaPhp size='60px' color='#fff' style={{ backgroundColor: '#657CCF', borderRadius: '25%'}}/>} text='PHP'/>
       </Grid>
       <Grid>
